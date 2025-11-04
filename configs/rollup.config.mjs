@@ -14,7 +14,7 @@ export default [
       {
         file: "dist/scrype.browser.js",
         format: "iife",
-        name: "QuickWallet",
+        name: "Scrype",
       },
       {
         file: "dist/scrype.browser.esm.js",

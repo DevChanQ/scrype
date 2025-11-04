@@ -1,6 +1,6 @@
 {
   "name": "scrype",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "description": "Scrype allows you to present code snippet in a interesting way",
   "exports": {
     ".": {

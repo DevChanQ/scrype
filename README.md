@@ -84,6 +84,48 @@ onMounted(() => {
 </style>
 ```
 
+### Browser Script Tag (CDN)
+
+You can use Scrype directly in the browser without a build step via CDN:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Scrype theme CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/scrype/dist/themes/github-dark.min.css">
+</head>
+<body>
+  <div id="sticky">
+    <div id="code-container"></div>
+  </div>
+
+  <!-- Scrype Browser Bundle -->
+  <script src="https://unpkg.com/scrype/dist/scrype.browser.js"></script>
+  
+  <script>
+    const code = `const greeting = "Hello, World!";
+console.log(greeting);`;
+
+    const options = {
+      code: code,
+      lang: "javascript",
+      pixelPerStep: 8,
+      position: "top",
+      codeContainerSelector: "#code-container"
+    };
+
+    // Scrype is available as a global variable
+    new Scrype('#sticky', options);
+  </script>
+</body>
+</html>
+```
+
+The browser bundle is available at:
+- IIFE: `https://unpkg.com/scrype/dist/scrype.browser.js`
+- ESM: `https://unpkg.com/scrype/dist/scrype.browser.esm.js`
+
 ## *Options*
 
 | Option | Type | Default | Description |
